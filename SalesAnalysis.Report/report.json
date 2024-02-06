@@ -1,0 +1,132 @@
+{
+  "config": "{\"version\":\"5.49\",\"themeCollection\":{\"baseTheme\":{\"name\":\"CY23SU11\",\"version\":\"5.50\",\"type\":2}},\"activeSectionIndex\":3,\"defaultDrillFilterOtherVisuals\":true,\"settings\":{\"useNewFilterPaneExperience\":true,\"allowChangeFilterTypes\":true,\"useStylableVisualContainerHeader\":true,\"queryLimitOption\":6,\"useEnhancedTooltips\":true,\"exportDataMode\":1,\"useDefaultAggregateDisplayName\":true},\"objects\":{\"section\":[{\"properties\":{\"verticalAlignment\":{\"expr\":{\"Literal\":{\"Value\":\"'Top'\"}}}}}],\"outspacePane\":[{\"properties\":{\"expanded\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]}}",
+  "layoutOptimization": 0,
+  "resourcePackages": [
+    {
+      "resourcePackage": {
+        "disabled": false,
+        "items": [
+          {
+            "name": "CY23SU11",
+            "path": "BaseThemes/CY23SU11.json",
+            "type": 202
+          }
+        ],
+        "name": "SharedResources",
+        "type": 2
+      }
+    }
+  ],
+  "sections": [
+    {
+      "config": "{}",
+      "displayName": "report1",
+      "displayOption": 1,
+      "filters": "[]",
+      "height": 720.00,
+      "name": "ReportSection",
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"21201878be20bb80ef01\",\"layouts\":[{\"id\":0,\"position\":{\"x\":36.6723259762309,\"y\":24.448217317487266,\"z\":0,\"width\":317.8268251273345,\"height\":191.91850594227506}}],\"singleVisual\":{\"visualType\":\"tableEx\",\"projections\":{\"Values\":[{\"queryRef\":\"Producer.Primary Producer\"},{\"queryRef\":\"All_measures.Total Sales\"},{\"queryRef\":\"All_measures.% Share\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"a\",\"Entity\":\"All_measures\",\"Type\":0},{\"Name\":\"p\",\"Entity\":\"Producer\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"a\"}},\"Property\":\"Total Sales\"},\"Name\":\"All_measures.Total Sales\",\"NativeReferenceName\":\"Total Sales\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"a\"}},\"Property\":\"Producer MS%\"},\"Name\":\"All_measures.% Share\",\"NativeReferenceName\":\"% Share\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"p\"}},\"Property\":\"Primary Producer\"},\"Name\":\"Producer.Primary Producer\",\"NativeReferenceName\":\"Primary Producer\"}],\"OrderBy\":[{\"Direction\":1,\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"p\"}},\"Property\":\"Primary Producer\"}}}]},\"drillFilterOtherVisuals\":true}}",
+          "filters": "[]",
+          "height": 191.92,
+          "width": 317.83,
+          "x": 36.67,
+          "y": 24.45,
+          "z": 0.00
+        },
+        {
+          "config": "{\"name\":\"93899c846cea375bd830\",\"layouts\":[{\"id\":0,\"position\":{\"x\":26.893039049235995,\"y\":262.81833616298815,\"z\":1,\"width\":548.8624787775891,\"height\":174.80475382003397,\"tabOrder\":1}}],\"singleVisual\":{\"visualType\":\"pivotTable\",\"projections\":{\"Rows\":[{\"queryRef\":\"Calendar.CalendarDate.Variation.Date Hierarchy.Year\",\"active\":true},{\"queryRef\":\"Calendar.CalendarDate.Variation.Date Hierarchy.Quarter\"},{\"queryRef\":\"Calendar.CalendarDate.Variation.Date Hierarchy.Month\"},{\"queryRef\":\"Calendar.CalendarDate.Variation.Date Hierarchy.Day\"}],\"Columns\":[{\"queryRef\":\"Calendar.Quarter\",\"active\":true}],\"Values\":[{\"queryRef\":\"All_measures.Total Sales\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"c\",\"Entity\":\"Calendar\",\"Type\":0},{\"Name\":\"a\",\"Entity\":\"All_measures\",\"Type\":0}],\"Select\":[{\"HierarchyLevel\":{\"Expression\":{\"Hierarchy\":{\"Expression\":{\"PropertyVariationSource\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Name\":\"Variation\",\"Property\":\"CalendarDate\"}},\"Hierarchy\":\"Date Hierarchy\"}},\"Level\":\"Year\"},\"Name\":\"Calendar.CalendarDate.Variation.Date Hierarchy.Year\",\"NativeReferenceName\":\"CalendarDate Year\"},{\"HierarchyLevel\":{\"Expression\":{\"Hierarchy\":{\"Expression\":{\"PropertyVariationSource\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Name\":\"Variation\",\"Property\":\"CalendarDate\"}},\"Hierarchy\":\"Date Hierarchy\"}},\"Level\":\"Quarter\"},\"Name\":\"Calendar.CalendarDate.Variation.Date Hierarchy.Quarter\",\"NativeReferenceName\":\"CalendarDate Quarter\"},{\"HierarchyLevel\":{\"Expression\":{\"Hierarchy\":{\"Expression\":{\"PropertyVariationSource\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Name\":\"Variation\",\"Property\":\"CalendarDate\"}},\"Hierarchy\":\"Date Hierarchy\"}},\"Level\":\"Month\"},\"Name\":\"Calendar.CalendarDate.Variation.Date Hierarchy.Month\",\"NativeReferenceName\":\"CalendarDate Month\"},{\"HierarchyLevel\":{\"Expression\":{\"Hierarchy\":{\"Expression\":{\"PropertyVariationSource\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Name\":\"Variation\",\"Property\":\"CalendarDate\"}},\"Hierarchy\":\"Date Hierarchy\"}},\"Level\":\"Day\"},\"Name\":\"Calendar.CalendarDate.Variation.Date Hierarchy.Day\",\"NativeReferenceName\":\"CalendarDate Day\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"Quarter\"},\"Name\":\"Calendar.Quarter\",\"NativeReferenceName\":\"Quarter\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"a\"}},\"Property\":\"Total Sales\"},\"Name\":\"All_measures.Total Sales\",\"NativeReferenceName\":\"Total Sales\"}],\"OrderBy\":[{\"Direction\":1,\"Expression\":{\"HierarchyLevel\":{\"Expression\":{\"Hierarchy\":{\"Expression\":{\"PropertyVariationSource\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Name\":\"Variation\",\"Property\":\"CalendarDate\"}},\"Hierarchy\":\"Date Hierarchy\"}},\"Level\":\"Year\"}}}]},\"autoSelectVisualType\":true,\"expansionStates\":[{\"roles\":[\"Rows\"],\"levels\":[{\"queryRefs\":[\"Calendar.CalendarDate.Variation.Date Hierarchy.Year\"],\"isCollapsed\":true,\"identityKeys\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"LocalDateTable_1a251539-5e6d-4936-93fe-b5df2b4596bf\"}},\"Property\":\"Year\"}}],\"isPinned\":true},{\"queryRefs\":[\"Calendar.CalendarDate.Variation.Date Hierarchy.Quarter\"],\"isCollapsed\":true,\"identityKeys\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"LocalDateTable_1a251539-5e6d-4936-93fe-b5df2b4596bf\"}},\"Property\":\"Quarter\"}}],\"isPinned\":true},{\"queryRefs\":[\"Calendar.CalendarDate.Variation.Date Hierarchy.Month\"],\"isCollapsed\":true,\"identityKeys\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"LocalDateTable_1a251539-5e6d-4936-93fe-b5df2b4596bf\"}},\"Property\":\"Month\"}}],\"isPinned\":true},{\"queryRefs\":[\"Calendar.CalendarDate.Variation.Date Hierarchy.Day\"],\"isCollapsed\":true,\"isPinned\":true}],\"root\":{\"identityValues\":null}}],\"drillFilterOtherVisuals\":true}}",
+          "filters": "[]",
+          "height": 174.80,
+          "width": 548.86,
+          "x": 26.89,
+          "y": 262.82,
+          "z": 1.00
+        }
+      ],
+      "width": 1280.00
+    },
+    {
+      "config": "{}",
+      "displayName": "Closed Acs",
+      "displayOption": 1,
+      "filters": "[]",
+      "height": 720.00,
+      "name": "ReportSection33e1943ee92a27bad184",
+      "ordinal": 2,
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"0ae0ee30d71e7e79d3dc\",\"layouts\":[{\"id\":0,\"position\":{\"x\":575.7555178268251,\"y\":41.56196943972835,\"z\":0,\"width\":245.70458404074702,\"height\":195.58573853989813,\"tabOrder\":0}}],\"singleVisual\":{\"visualType\":\"card\",\"projections\":{\"Values\":[{\"queryRef\":\"All_measures.Closed Acs\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"a\",\"Entity\":\"All_measures\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"a\"}},\"Property\":\"Closed Acs\"},\"Name\":\"All_measures.Closed Acs\",\"NativeReferenceName\":\"Closed Acs\"}]},\"autoSelectVisualType\":true,\"drillFilterOtherVisuals\":true}}",
+          "filters": "[]",
+          "height": 195.59,
+          "width": 245.70,
+          "x": 575.76,
+          "y": 41.56,
+          "z": 0.00
+        }
+      ],
+      "width": 1280.00
+    },
+    {
+      "config": "{}",
+      "displayName": "Cum Quarterly Sales",
+      "displayOption": 1,
+      "filters": "[]",
+      "height": 720.00,
+      "name": "ReportSection6c336a5e4e9e180e07e3",
+      "ordinal": 3,
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"0480126cb5b5ddde1c06\",\"layouts\":[{\"id\":0,\"position\":{\"x\":45.22920203735144,\"y\":135.68760611205434,\"z\":0,\"width\":545.195246179966,\"height\":404.61799660441426,\"tabOrder\":0}}],\"singleVisual\":{\"visualType\":\"tableEx\",\"projections\":{\"Values\":[{\"queryRef\":\"Calendar.Year\"},{\"queryRef\":\"Calendar.Quarter\"},{\"queryRef\":\"All_measures.Quarterly Cum Sales\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"a\",\"Entity\":\"All_measures\",\"Type\":0},{\"Name\":\"c\",\"Entity\":\"Calendar\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"a\"}},\"Property\":\"Quarterly Cum Sales\"},\"Name\":\"All_measures.Quarterly Cum Sales\",\"NativeReferenceName\":\"Quarterly Cum Sales\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"Year\"},\"Name\":\"Calendar.Year\",\"NativeReferenceName\":\"Year\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"Quarter\"},\"Name\":\"Calendar.Quarter\",\"NativeReferenceName\":\"Quarter\"}]},\"drillFilterOtherVisuals\":true}}",
+          "filters": "[]",
+          "height": 404.62,
+          "width": 545.20,
+          "x": 45.23,
+          "y": 135.69,
+          "z": 0.00
+        }
+      ],
+      "width": 1280.00
+    },
+    {
+      "config": "{}",
+      "displayName": "construction niche",
+      "displayOption": 1,
+      "filters": "[]",
+      "height": 720.00,
+      "name": "ReportSectionce53b81afc8ffa899749",
+      "ordinal": 1,
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"29b513876108fd1b6a4e\",\"layouts\":[{\"id\":0,\"position\":{\"x\":11.00169779286927,\"y\":34.227504244482176,\"z\":0,\"width\":220.0339558573854,\"height\":174.80475382003397,\"tabOrder\":0}}],\"singleVisual\":{\"visualType\":\"card\",\"projections\":{\"Values\":[{\"queryRef\":\"All_measures.Construction Sales\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"a\",\"Entity\":\"All_measures\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"a\"}},\"Property\":\"Construction Sales\"},\"Name\":\"All_measures.Construction Sales\",\"NativeReferenceName\":\"Construction Sales\"}]},\"autoSelectVisualType\":true,\"drillFilterOtherVisuals\":true}}",
+          "filters": "[]",
+          "height": 174.80,
+          "width": 220.03,
+          "x": 11.00,
+          "y": 34.23,
+          "z": 0.00
+        },
+        {
+          "config": "{\"name\":\"d67e5bb82b0b096ffe57\",\"layouts\":[{\"id\":0,\"position\":{\"x\":499.1954913702008,\"y\":209.20042268404367,\"z\":2,\"width\":780.5339908418457,\"height\":510.737583656217,\"tabOrder\":2}}],\"singleVisual\":{\"visualType\":\"decompositionTreeVisual\",\"projections\":{\"Analyze\":[{\"queryRef\":\"All_measures.Construction Sales\"}],\"ExplainBy\":[{\"queryRef\":\"Accounts.Account Name\",\"active\":true},{\"queryRef\":\"Sales.Rev_Group\",\"active\":true},{\"queryRef\":\"Sales.Stage Name\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"a\",\"Entity\":\"All_measures\",\"Type\":0},{\"Name\":\"a1\",\"Entity\":\"Accounts\",\"Type\":0},{\"Name\":\"s\",\"Entity\":\"Sales\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"a\"}},\"Property\":\"Construction Sales\"},\"Name\":\"All_measures.Construction Sales\",\"NativeReferenceName\":\"Construction Sales\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"a1\"}},\"Property\":\"Account Name\"},\"Name\":\"Accounts.Account Name\",\"NativeReferenceName\":\"Account Name\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"s\"}},\"Property\":\"Rev_Group\"},\"Name\":\"Sales.Rev_Group\",\"NativeReferenceName\":\"Rev_Group\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"s\"}},\"Property\":\"Stage Name\"},\"Name\":\"Sales.Stage Name\",\"NativeReferenceName\":\"Stage Name\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"a\"}},\"Property\":\"Construction Sales\"}}}]},\"expansionStates\":[{\"roles\":[\"ExplainBy\"],\"levels\":[{\"queryRefs\":[\"Accounts.Account Name\"],\"isCollapsed\":true,\"identityKeys\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Accounts\"}},\"Property\":\"Account Name\"}}],\"isPinned\":true},{\"queryRefs\":[\"Sales.Rev_Group\"],\"isCollapsed\":true,\"identityKeys\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Sales\"}},\"Property\":\"Rev_Group\"}}],\"isPinned\":true,\"AIInformation\":{\"method\":\"MaxSplit\"}},{\"queryRefs\":[\"Sales.Stage Name\"],\"isCollapsed\":true,\"isPinned\":true,\"AIInformation\":{\"method\":\"MaxSplit\"}}],\"root\":{\"identityValues\":null,\"children\":[{\"identityValues\":[{\"Literal\":{\"Value\":\"'West Point Construction Ltd'\"}}],\"isToggled\":true,\"children\":[{\"identityValues\":[{\"Literal\":{\"Value\":\"'Tier-1'\"}}],\"isToggled\":true}]}]}}],\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"tree\":[{\"properties\":{\"effectiveBarsPerLevel\":{\"expr\":{\"Literal\":{\"Value\":\"6L\"}}}}}],\"insights\":[{\"properties\":{\"isAINode\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}},\"selector\":{\"data\":[{\"scopeId\":{\"Comparison\":{\"ComparisonKind\":0,\"Left\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Accounts\"}},\"Property\":\"Account Name\"}},\"Right\":{\"Literal\":{\"Value\":\"'West Point Construction Ltd'\"}}}}},{\"scopeId\":{\"Comparison\":{\"ComparisonKind\":0,\"Left\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Sales\"}},\"Property\":\"Rev_Group\"}},\"Right\":{\"Literal\":{\"Value\":\"'Tier-1'\"}}}}}]}},{\"properties\":{\"isAINode\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}},\"selector\":{\"data\":[{\"scopeId\":{\"Comparison\":{\"ComparisonKind\":0,\"Left\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Accounts\"}},\"Property\":\"Account Name\"}},\"Right\":{\"Literal\":{\"Value\":\"'West Point Construction Ltd'\"}}}}},{\"scopeId\":{\"Comparison\":{\"ComparisonKind\":0,\"Left\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Sales\"}},\"Property\":\"Rev_Group\"}},\"Right\":{\"Literal\":{\"Value\":\"'Tier-1'\"}}}}},{\"scopeId\":{\"Comparison\":{\"ComparisonKind\":0,\"Left\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Sales\"}},\"Property\":\"Stage Name\"}},\"Right\":{\"Literal\":{\"Value\":\"'1-Met Client,Data Gather,Insurer Market'\"}}}}}]}}]}}}",
+          "filters": "[]",
+          "height": 510.74,
+          "width": 780.53,
+          "x": 499.20,
+          "y": 209.20,
+          "z": 2.00
+        },
+        {
+          "config": "{\"name\":\"d794bafa26ad62679d14\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":219.29975343430786,\"z\":1,\"width\":499.1954913702008,\"height\":500.6382529059528,\"tabOrder\":1}}],\"singleVisual\":{\"visualType\":\"clusteredBarChart\",\"projections\":{\"Category\":[{\"queryRef\":\"Accounts.Account Name\"}],\"Y\":[{\"queryRef\":\"All_measures.Construction Sales\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"a\",\"Entity\":\"Accounts\",\"Type\":0},{\"Name\":\"a1\",\"Entity\":\"All_measures\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"a\"}},\"Property\":\"Account Name\"},\"Name\":\"Accounts.Account Name\",\"NativeReferenceName\":\"Account Name\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"a1\"}},\"Property\":\"Construction Sales\"},\"Name\":\"All_measures.Construction Sales\",\"NativeReferenceName\":\"Construction Sales\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"a1\"}},\"Property\":\"Construction Sales\"}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"labels\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}],\"valueAxis\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}},\"showAxisTitle\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"categoryAxis\":[{\"properties\":{\"maxMarginFactor\":{\"expr\":{\"Literal\":{\"Value\":\"50L\"}}},\"showAxisTitle\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"alignment\":{\"expr\":{\"Literal\":{\"Value\":\"'center'\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 500.64,
+          "width": 499.20,
+          "x": 0.00,
+          "y": 219.30,
+          "z": 1.00
+        }
+      ],
+      "width": 1280.00
+    }
+  ]
+}

@@ -1295,10 +1295,11 @@
             "annotations": [
               {
                 "name": "PBI_FormatHint",
-                "value": "{\"isGeneralNumber\":true}"
+                "value": "{\"currencyCulture\":\"en-US\"}"
               }
             ],
             "expression": "CALCULATE([Total Sales], FILTER(ALL('Calendar'),'Calendar'[CalendarDate] <= MAX('Calendar'[CalendarDate])))",
+            "formatString": "\\$#,0;(\\$#,0);\\$#,0",
             "lineageTag": "d80b49b2-4f25-422a-b12a-c675eae3d0d2"
           }
         ],

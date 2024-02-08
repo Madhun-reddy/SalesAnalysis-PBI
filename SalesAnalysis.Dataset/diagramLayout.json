@@ -55,15 +55,15 @@
           "nodeIndex": "Calendar",
           "nodeLineageTag": "70cb08f0-734a-4427-a0ce-9c0edfc50803",
           "size": {
-            "height": 165,
+            "height": 189.22729615166352,
             "width": 234
           },
           "zIndex": 0
         },
         {
           "location": {
-            "x": 907.18303780766257,
-            "y": 221
+            "x": 908.45815865775,
+            "y": 223.55024170017512
           },
           "nodeIndex": "All_measures",
           "nodeLineageTag": "ab2bae83-d736-44a9-b0dd-f11a2e5c35a3",

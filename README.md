@@ -18,9 +18,17 @@
 Assessment excel file contains 3 tables of Sales, Accounts & Producer and they are imported to Power Query to check for 
 
 ### Data Transformation
-As a first step to checking for data consistency and quality. I have done column & data quality analysis,
+As a first step to checking for data consistency and quality. I have checked for column & data quality issues.
 
-### Findings & Steps Taken
+#### Findings & Steps Taken
+
+![Errors](https://github.com/Madhun-reddy/SalesAnalysis-PBI/blob/main/Errors/Screenshot%202024-02-23%20232556.png)
+
+![Blanks](https://github.com/Madhun-reddy/SalesAnalysis-PBI/blob/main/Errors/Screenshot%202024-02-06%20143643.png)
+
+![Invalid Dates](https://github.com/Madhun-reddy/SalesAnalysis-PBI/blob/main/Errors/Screenshot%202024-02-06%20143825.png)
+
+![image](https://github.com/Madhun-reddy/SalesAnalysis-PBI/assets/119162777/48f696ac-8d9a-4452-9242-94f68b07a412)
     
 ##### SALES TABLE
 |Column Name|	Lab: Data understanding on each variable 	|Solution|	Remarks|
@@ -30,6 +38,7 @@ As a first step to checking for data consistency and quality. I have done column
 |Niche Affiliations|	Row-14 contains Blank values & Errors.|	Blank values are replaced with "na" values for the moment.	|Need more clarification as to what to do with these "na" values. Task assigned to DE team.
 |Expected Decision Date|	167 contains errors	| |	Task assigned to DE team.
 |Annual revenue|	Row-171 contains an error. Error percent is less than 10% so we will replace error with mean value of Annual Revenue at the moment of discovery	| 1. =Table.ReplaceErrorValues(#"Replaced Blank to Na", {{"Annual Revenue",null}}) 2. =Table.ReplaceValue(#"Replaced Errors",null, List.Average(#"Replaced Errors"[Annual Revenue]),Replacer.ReplaceValue,{"Annual Revenue"}) | Task assigned to DE team. Recommended to check at the backend.  
+
     - If I try to SORT date column for better visual order. I m getting error as DataFormat.Error: We couldn't parse the input provided as a Date value.Details:
     - So we need further clarity & assistance from the data engineering team to solve the related issues. Once we get clarity we are ready for further exploration.
 
@@ -37,13 +46,15 @@ As a first step to checking for data consistency and quality. I have done column
 Producer and Accounts tables looks to be clean and ready for analysis.
 
 ##### CALENDAR TABLE
+
 Calendar table is very much required for doing Date & Time intelligence functions to work in PBI. So created a calendar table using Power query with the help of **StartDate** and **EndDate** parameters. Then used a new query to create a calendar with below mentioned function, 
 
-'= List.Dates(StartDate,Duration.Days(EndDate - StartDate)+1,#duration(1,0,0,0))'
-
+***= List.Dates(StartDate,Duration.Days(EndDate - StartDate)+1,#duration(1,0,0,0))***
 
 ### Data Modelling
 Connected all dimension tables like Calendar, Accounts & Producer to fact Sales table using one-many relationships in the model view window.
+
+![](https://github.com/Madhun-reddy/SalesAnalysis-PBI/blob/main/Errors/Screenshot%202024-02-06%20202105.png)
 
 ### Analysis & Visualisation
 

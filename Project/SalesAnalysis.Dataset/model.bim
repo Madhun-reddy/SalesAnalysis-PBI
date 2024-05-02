@@ -12,7 +12,7 @@
       },
       {
         "name": "PBIDesktopVersion",
-        "value": "2.126.1261.0 (24.02)"
+        "value": "2.128.1177.0 (24.04)"
       },
       {
         "name": "PBI_ProTooling",
@@ -25,7 +25,6 @@
         "name": "en-IN",
         "linguisticMetadata": {
           "content": {
-            "DynamicImprovement": "HighConfidence",
             "Language": "en-US",
             "Version": "1.0.0"
           },
@@ -343,7 +342,7 @@
             "source": {
               "expression": [
                 "let",
-                "    Source = Excel.Workbook(File.Contents(\"D:\\Projects\\SrAnalyst_Assessment\\Sr.Anlayst BI_Assessment.xlsx\"), null, true),",
+                "    Source = Excel.Workbook(File.Contents(\"D:\\Projects\\Github\\SrAnalyst_Assessment\\SalesAnalysis-PBI\\Data\\Sr.Anlayst BI_Assessment.xlsx\"), null, true),",
                 "    Sales_Table = Source{[Item=\"Sales\",Kind=\"Table\"]}[Data],",
                 "    // Data types was inconsistence with the columns and their values so converted data types to their original consistent column types.",
                 "    #\"Changed Type\" = Table.TransformColumnTypes(Sales_Table,{{\"Date\", type date}, {\"Primary Producer\", type text}, {\"Stage Name\", type text}, {\"Account Name\", type text}, {\"Opportunity Name\", type text}, {\"Niche Affiliations\", type text}, {\"Expected Decision Date\", type date}, {\"Annual Revenue\", type number}}),",
@@ -616,7 +615,7 @@
             "source": {
               "expression": [
                 "let",
-                "    Source = Excel.Workbook(File.Contents(\"D:\\Projects\\SrAnalyst_Assessment\\Sr.Anlayst BI_Assessment.xlsx\"), null, true),",
+                "    Source = Excel.Workbook(File.Contents(\"D:\\Projects\\Github\\SrAnalyst_Assessment\\SalesAnalysis-PBI\\Data\\Sr.Anlayst BI_Assessment.xlsx\"), null, true),",
                 "    Producer_Table = Source{[Item=\"Producer\",Kind=\"Table\"]}[Data],",
                 "    #\"Changed Type\" = Table.TransformColumnTypes(Producer_Table,{{\"Primary Producer\", type text}, {\"Office\", type text}})",
                 "in",
@@ -688,7 +687,7 @@
             "source": {
               "expression": [
                 "let",
-                "    Source = Excel.Workbook(File.Contents(\"D:\\Projects\\SrAnalyst_Assessment\\Sr.Anlayst BI_Assessment.xlsx\"), null, true),",
+                "    Source = Excel.Workbook(File.Contents(\"D:\\Projects\\Github\\SrAnalyst_Assessment\\SalesAnalysis-PBI\\Data\\Sr.Anlayst BI_Assessment.xlsx\"), null, true),",
                 "    Accounts_Table = Source{[Item=\"Accounts\",Kind=\"Table\"]}[Data],",
                 "    #\"Changed Type\" = Table.TransformColumnTypes(Accounts_Table,{{\"Account Name\", type text}, {\"Acct ID\", type text}, {\"Primary Office\", type text}})",
                 "in",
